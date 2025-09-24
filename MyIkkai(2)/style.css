@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header_container {
+    width: 100%;
+}
+
+.banner-box {
+    position: relative; /* для абсолютного позиционирования */
+    background-color: black;
+    height: 200px;
+}
+
+.banner-img {
+    position: flex; /* изображение фоном */
+    top: 0; left: 5%;
+    width: 250px; /* фиксированная ширина или любая подходящая */
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;  /* сдвигаем чуть вправо, чтобы не налезать на картинку */
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    max-width: 40%; /* задаём ограничение ширины */
+}
+@media (max-width: 768px) {
+  .banner-text {
+    left: 75%;
+    max-width: 80%;
+    font-size: 14px; /* уменьшаем шрифт, если нужно */
+  }
+}
+
+.login-basket-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.login a, .basket a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.login a:hover, .basket a:hover {
+    background-color: #f0f0f0;
+}
+.login a:hover, .basket a:hover {
+    text-decoration: underline;
+}
+.logo-text {
+    color: orange;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #000000aa;
+    margin-bottom: 10px;
+}
+
+.banner-text h1 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+#menuArea {
+background:orange;
+}
+#menuArea ul {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap;
+width: 80vw;
+padding: 0;
+list-style: none;
+text-align: center;
+background: orange;
+margin: 0 auto;
+}
+#menuArea li {
+flex: 1;
+min-width: 100px;
+padding: 10px;
+text-align: center;
+font-weight: bold;
+}
+#menuArea li:hover {
+background:orange;
+}
+.item-container {
+    width:200px;
+    height:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* равномерное распределение */
+    align-items: center;
+    text-align: center;
+   /* border: 1px solid #ccc;*/
+    padding: 0px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  width: 80%;
+  background-color: #ffffff;
+}
+.productList li {
+    list-style: none;
+    /* width: 23vw; */ /* <-- удалить это */
+    width: 200px; /* или 220px, или auto */
+    margin: 0;
+    text-align: left;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+.product-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.productList li :hover{
+background:#C8EBFA
+}
+.productImg{
+text-align: center;
+justify-content: center;
+height:150px;
+width:100%;
+    align-items: center;
+}
+.productImg img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.productName{
+	text-align: center;
+}
+.price{
+text-align:left;
+display:block;
+}
+.item-container:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
